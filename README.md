@@ -114,6 +114,10 @@
     ![](./images/stray-1.png)
     
     ![](./images/stray-2.png)
+  
+## 設置
+  - 後端 [settings.py](https://github.com/hugoyoyo17/python-Django-project/blob/master/backend/miumiushop/settings.py) 文件中修改database、email、ECPAY等設置
+  - 前端 [login.html](https://github.com/hugoyoyo17/python-Django-project/blob/master/frontend/site/login.html) 及 [login.js](https://github.com/hugoyoyo17/python-Django-project/blob/master/frontend/site/js/login.js) 修改client_id 及 appId
     
     
     
