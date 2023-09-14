@@ -17,7 +17,7 @@
       - 第三方金流串接
 
   - 前端:
-    - 從https://www.templatemonster.com/中獲取模板，利用HTML、CSS進行修改
+    - 從https://www.templatemonster.com/ 中獲取模板，利用HTML、CSS進行修改
     - JavaScript(利用Ajax向後端請求數據)
 
   - 資料庫

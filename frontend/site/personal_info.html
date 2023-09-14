@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+     <title>miumiu寵物商城</title>
+     <meta charset="utf-8">
+     <link rel="icon" href="images/favicon.ico">
+     <link rel="shortcut icon" href="images/favicon.ico" />
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/form.css">
+     <script src="js/jquery.js"></script>
+     <script src="js/init.js"></script>
+     <script src="js/forms.js"></script>
+     <script src="js/register.js"></script>
+     <script src="js/jquery-migrate-1.1.1.js"></script>
+     <script src="js/superfish.js"></script>     
+     <script src="js/jquery.equalheights.js"></script>
+     <script src="js/jquery.easing.1.3.js"></script>
+          <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/personal_info.js" ></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js
+    " ></script>
+
+     <script>
+    
+    jQuery(document).ready(function() {
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+     </script>
+     <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <link rel="stylesheet" media="screen" href="css/ie.css">
+
+    <![endif]-->
+     </head>
+     <body>
+<!--==============================header=================================-->
+<header> 
+  <div class="container_12">
+    <div class="grid_12"> 
+    <h1><a href="index.html"><img src="images/logo.png" alt="Gerald Harris attorney at law"></a> </h1>
+         <div class="menu_block">
+           <nav  class="" >
+            <ul class="sf-menu">
+                   <!-- <li class="current"><a href="index.html">首頁</a></li> -->
+                   <li><a href="index.html">首頁</a></li>
+                   <li class="with_ul"><a href="product_list.html?list_for=貓咪商品">貓咪專區 </a>
+                     <ul>
+                         <li><a href="product_list.html?list_for=貓咪飼料"> 貓咪飼料</a></li>
+                         <li><a href="product_list.html?list_for=貓咪罐頭">貓咪罐頭</a></li>
+                         <li><a href="product_list.html?list_for=貓咪零食">貓咪零食</a></li>
+                         <li><a href="product_list.html?list_for=貓咪用品">貓咪用品</a></li>
+                     </ul>
+                   </li>
+                   <li class="with_ul"><a href="product_list.html?list_for=狗狗商品">狗狗專區</a>
+                    <ul>
+                      <li><a href="product_list.html?list_for=狗狗飼料">狗狗飼料</a></li>
+                      <li><a href="product_list.html?list_for=狗狗罐頭">狗狗罐頭</a></li>
+                      <li><a href="product_list.html?list_for=狗狗零食">狗狗零食</a></li>
+                      <li><a href="product_list.html?list_for=狗狗用品">狗狗用品</a></li>
+                  </ul>
+                  </li>
+                   <li><a href="adoption.html">浪浪之家 </a></li>
+                 </ul>
+              </nav>
+           <div class="clear"></div>
+           </div>
+           <div class="clear"></div>
+           <div class="right">
+            <ul class="login">
+              <li>
+                <a href="carts.html"><img src="images/shop_car.png" title="我的購物車">
+                <b class="my_car_count">0</b>
+                </a>   
+              </li>
+              <li><a href="login.html" id="my_login">登入</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+</header>
+
+
+<div class="content pt1">
+  <!-- <div class="ic">More Website Templates @ TemplateMonster.com - June 10, 2013!</div> -->
+  <div class="container_12">
+
+    <div class="modal" style="display:none">
+      <div class="modal_dialog">
+          <div class="modal_header">
+              操作提醒
+          </div>
+          <div class="modal_information">
+              <!-- <img src="../static/images/model/model_img2.png" alt="" /> -->
+              <span>是否確定收到貨物</span>
+
+          </div>
+          <div class="yes"><span>確定</span></div>
+          <div class="no"><span>取消</span></div>
+      </div>
+  </div>
+
+     <div class="grid_address_info prefix_1 clearfix">
+       <div class="top_title">
+         <ul>
+           <li class="clicked top_selecter" id="my_info">個人資訊</li>
+           <li class="top_selecter" id="my_order">我的訂單</li>
+           <li>&nbsp;</li>
+           <li>&nbsp;</li>
+           <li>&nbsp;</li>
+         </ul>
+       </div>
+      <div id="info_table" class="table_hide">
+      <div class="sign_up"><h2 class="ic1">個人資訊</h2> 
+        <span class="permission_name">&nbsp;</span>
+        <span class="person_active">用戶狀態--</span>
+        <span class="log_out">登出</span>
+      </div>
+      <div class="info_edit_box">
+        <div class="info_row">
+            <label for="username" class="info_label">用戶名</label>
+            <input type="text" id="username" name="username">
+          </div>
+          <div class="info_row">
+            <label for="email" class="info_label">電子信箱</label>
+            <span class="get_verify">重新獲取驗證碼</span>
+            <input type="text" id="email" name="email">
+          </div>
+          <div class="info_row">
+            <label for="phone" class="info_label">聯絡電話</label>
+            <input type="text" id="phone" name="phone">
+          </div>
+          <div class="info_row">
+            <label for="password" class="info_label">密碼</label>
+            <a href="changepass.html" class="change_pass">修改密碼</a>
+            <input type="password" id="password" name="password">
+          </div>
+
+
+          <div class="info_row">
+            <label for="gender" class="info_label">性別</label>
+            <div class="info_div">
+              <select name="gender" id="gender">
+              <option value="">-請選擇-</option>
+              <option value="1">男</option>
+              <option value="2">女</option>
+              <option value="3">不透露</option>
+            </select>
+            </div>
+    
+          </div>
+   
+
+          <div class="info_row birthday_input">
+            <label for="birthday" class="info_label">生日<span id="span_start"></span></label>
+            <div class="info_div birthday_select">
+              <span id="span_year">年</span>
+              <span id="span_month">月</span>
+              <span id="span_day">日</span>
+            </div>
+            <input type="text" id="birthday_exist" name="birthday_exist" disabled="disabled" >
+          </div>
+
+      </div>
+      <div class="info_edit_box">
+        <div class="info_row" id="abc">
+          <label for="address" class="info_label">送貨地址</label>
+          <span class="add_address" >新增地址</span>
+          <div class="address_edit_box displayN">
+
+            <div class="delete_address_btn">刪除</div>
+            <div class="address_info_div" data-uid="1">
+              <span class="place_span"></span>
+              <span class="address_info"data-uid='1'>-</span>
+              <span class="address_info_city"data-uid='1'>-</span>
+              <span class="address_info_district"data-uid='1'>-</span>
+              <span class="address_info_address"data-uid='1'></span>
+              <span class="address_slider_open" data-uid='1'></span>
+            </div>
+            
+            <div class="address_slider_div">
+              <span class="place_span"></span>
+              <label for="address_username" class="info_label">收件人</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_username_1" name="address_username" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件人電話</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_phone_1" name="address_phone" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件地區</label>
+              <br>
+              <span class="place_span"></span>
+              <div role="tw-city-selector" class="address_selecter1">
+                <div>
+                  <select class="county"></select><select class="district"></select>
+                </div>
+              </div>
+              <br>
+              <span class="place_span"></span>
+              <label for="address_address" class="info_label">地址</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_address_1" name="address_address" class="address_input"> 
+            </div>
+          </div>
+
+          <div class="address_edit_box displayN">
+            
+            <div class="delete_address_btn">刪除</div>
+            <div class="address_info_div" data-uid="2">
+              <span class="place_span"></span>
+              <span class="address_info"data-uid='2'>-</span>
+              <span class="address_info_city"data-uid='2'>-</span>
+              <span class="address_info_district"data-uid='2'>-</span>
+              <span class="address_info_address"data-uid='2'></span>
+              <span class="address_slider_open" data-uid='2'></span>
+            </div>
+            
+            <div class="address_slider_div">
+              <span class="place_span"></span>
+              <label for="address_username" class="info_label">收件人</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_username_2" name="address_username" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件人電話</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_phone_2" name="address_phone" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件地區</label>
+              <br>
+              <span class="place_span"></span>
+              <div role="tw-city-selector" class="address_selecter2">
+                <div>
+                  <select class="county"></select><select class="district"></select>
+                </div>
+              </div>
+              <br>
+              <span class="place_span"></span>
+              <label for="address_address" class="info_label">地址</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_address_2" name="address_address" class="address_input"> 
+            </div>
+          </div>
+
+          <div class="address_edit_box displayN">
+            <div class="delete_address_btn">刪除</div>
+            <div class="address_info_div" data-uid="3">
+              <span class="place_span"></span>
+              <span class="address_info"data-uid='3'>-</span>
+              <span class="address_info_city"data-uid='3'>-</span>
+              <span class="address_info_district"data-uid='3'>-</span>
+              <span class="address_info_address"data-uid='3'></span>
+              <span class="address_slider_open" data-uid='3'></span>
+            </div>
+            
+            <div class="address_slider_div">
+              <span class="place_span"></span>
+              <label for="address_username" class="info_label">收件人</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_username_3" name="address_username" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件人電話</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_phone_3" name="address_phone" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件地區</label>
+              <br>
+              <span class="place_span"></span>
+              <div role="tw-city-selector" class="address_selecter3">
+                <div>
+                  <select class="county"></select><select class="district"></select>
+                </div>
+              </div>
+              <br>
+              <span class="place_span"></span>
+              <label for="address_address" class="info_label">地址</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_address_3" name="address_address" class="address_input"> 
+            </div>
+          </div>
+
+          <div class="address_edit_box displayN">
+            <div class="delete_address_btn">刪除</div>
+            <div class="address_info_div" data-uid="4">
+              <span class="place_span"></span>
+              <span class="address_info"data-uid='4'>-</span>
+              <span class="address_info_city"data-uid='4'>-</span>
+              <span class="address_info_district"data-uid='4'>-</span>
+              <span class="address_info_address"data-uid='4'></span>
+              <span class="address_slider_open" data-uid='4'></span>
+            </div>
+            
+            <div class="address_slider_div">
+              <span class="place_span"></span>
+              <label for="address_username" class="info_label">收件人</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_username_4" name="address_username" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件人電話</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_phone_4" name="address_phone" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件地區</label>
+              <br>
+              <span class="place_span"></span>
+              <div role="tw-city-selector" class="address_selecter4">
+                <div>
+                  <select class="county"></select><select class="district"></select>
+                </div>
+              </div>
+              <br>
+              <span class="place_span"></span>
+              <label for="address_address" class="info_label">地址</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_address_4" name="address_address" class="address_input"> 
+            </div>
+          </div>
+
+          <div class="address_edit_box displayN">
+            <div class="delete_address_btn">刪除</div>
+            <div class="address_info_div" data-uid="5">
+              <span class="place_span"></span>
+              <span class="address_info"data-uid='5'>-</span>
+              <span class="address_info_city"data-uid='5'>-</span>
+              <span class="address_info_district"data-uid='5'>-</span>
+              <span class="address_info_address"data-uid='5'></span>
+              <span class="address_slider_open" data-uid='5'></span>
+            </div>
+            
+            <div class="address_slider_div">
+              <span class="place_span"></span>
+              <label for="address_username" class="info_label">收件人</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_username_5" name="address_username" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件人電話</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_phone_5" name="address_phone" class="address_input">
+              <span class="place_span"></span>
+              <label for="address_phone" class="info_label">收件地區</label>
+              <br>
+              <span class="place_span"></span>
+              <div role="tw-city-selector" class="address_selecter5">
+                <div>
+                  <select class="county"></select><select class="district"></select>
+                </div>
+              </div>
+              <br>
+              <span class="place_span"></span>
+              <label for="address_address" class="info_label">地址</label>
+              <br>
+              <span class="place_span"></span>
+              <input type="text" id="address_address_5" name="address_address" class="address_input"> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="btn"><input type="button" value="儲存變更" id ="update_btn"><input type="button" value="取消" id="cancel_btn"></div>
+      </div>
+       
+      <div id="order_table" class="table_hide" style="display: none;">
+        <div class="sign_up">
+          <h2>我的訂單</h2>
+        </div>
+        <div >
+          <table class="order">
+            <thead>
+              <tr>
+                <th>訂單編號</th>
+                <th>訂單日期</th>
+                <th>合計</th>
+                <th>訂單狀態</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <th>20230615185528698</th>
+                <th>2023-06-16</th>
+                <th>NT$577</th>
+                <th>已取消</th>
+                <th><button>詳細資訊</button></th>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+
+       
+      
+       <!-- <form id="form">
+       <div class="success_wrapper">
+       <div class="success">Contact form submitted!<br>
+       <strong>We will be in touch soon.</strong> </div></div>
+       <fieldset>
+       <label class="name">
+       <input type="text" value="Name:">
+       <br class="clear">
+       <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
+       <label class="email">
+       <input type="text" value="E-mail:">
+       <br class="clear">
+       <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> </label>
+       <label class="phone">
+       <input type="tel" value="Phone:">
+       <br class="clear">
+       <span class="error error-empty">*This is not a valid phone number.</span><span class="empty error-empty">*This field is required.</span> </label>
+       <label class="message">
+       <textarea></textarea>
+       <br class="clear">
+       <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+       <div class="clear"></div>
+       <div class="btns"><a data-type="reset" class="btn">Clear</a><a data-type="submit" class="btn">Send</a>
+       <div class="clear"></div>
+       </div></fieldset></form> -->
+        
+     </div>
+   </div>
+  </div>
+<!--=======content================================-->
+
+
+<!--==============================footer=================================-->
+
+<footer>    
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="socials">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+     <p>Pet Club  &copy; 2013 | <a href="#">Privacy Policy</a> | Website  designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></p>
+     
+    </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+
+<script>
+  $(function(){
+    $('.top_selecter').click(function () {
+      if ($(this).hasClass('clicked')) {
+        return
+      }
+      $(this).toggleClass('clicked')
+      var otherselecter = $(this).siblings('.top_selecter')
+      otherselecter.removeClass('clicked')
+
+      if ($('#my_info').hasClass('clicked')) {
+        $('.table_hide').hide()
+        $('#info_table').show()
+      }
+      else if ($('#my_order').hasClass('clicked')) {
+        $('.table_hide').hide()
+        $('#order_table').show()
+      }
+    })
+
+    var isSendRequest = false
+    $('#my_order').click(function(){
+      if(isSendRequest==false){
+        $.ajax({
+          type:'get',
+          url:baseUrl+'/v1/orders/',
+          beforeSend: function (request) {
+            request.setRequestHeader('authorization', localStorage.getItem('miushop_token'))
+          },
+          success:function(data){
+            if (data.code == 403) {
+              alert('用戶認證已過期，請重新登入')
+              window.localStorage.removeItem('miushop_username');
+              window.localStorage.removeItem('miushop_email');
+              window.localStorage.removeItem('miushop_token');
+              window.localStorage.removeItem('miushop_cartscount');
+              window.location.href = 'login.html'
+            }
+            if(data.code==200){
+              var html = ''
+              var ol = data.data
+              // console.log(ol.length)
+              for(var i=0;i<ol.length;i++){
+              html += `
+              <tr>
+                <th>${ol[i].order_id}</th>
+                <th>${ol[i].order_time}</th>
+                <th>NT$${ol[i].total_amount}</th>
+              `
+              if(ol[i].status==0){
+                html+='<th>已取消</th>'
+              }
+              else if(ol[i].status==1){
+                html+='<th>待付款</th>'
+              }
+              else if(ol[i].status==2){
+                html+='<th>待發貨</th>'
+              }
+              else if(ol[i].status==3){
+                html+='<th>待收貨</th>'
+              }
+              else if(ol[i].status==4){
+                html+='<th>訂單完成</th>'
+              }
+              html+='<th><button class="get_detail" data-id="'+ol[i].order_id+'">詳細資訊</button></th>'
+              if(ol[i].status==3){
+                html += '<th><button class="get_pro_check" data-id="' + ol[i].order_id + '">確認收貨</button></th>'
+              }
+              // else if(ol[i].status==1){
+              //   html +='<th><button class="order_go_pay d" data-id="'+i+'">前往付款</button></th>'
+              // }
+              else{
+                html += '<th><button class="get_pro_check disable" data-id="' + ol[i].order_id + '" disabled>確認收貨</button></th>'
+              }
+              html+='</tr>'            
+              }
+              $('tbody').html(html)
+
+
+              $('.get_detail').click(function(){
+                var id = $(this).data('id')
+                console.log(id)
+                getDetail(id)
+              })
+              $('.get_pro_check').click(function(){
+                var id = $(this).data('id')
+                // 該行欲修改數據
+                var element = $(this)
+                console.log(id)
+                $('.modal').show();
+                $('.no').click(function(){
+                  $('.modal').hide()
+                })
+                $('.yes').click(function(){
+                  getProCheck(id,element)
+                })
+
+              })
+              // $('.order_go_pay').click(function(){
+              //   var i = $(this).data('id')
+              //   var html = ol[i].pay_url
+              //   $('.container_12').html(html)
+              // })
+
+            }
+            else{
+              alert(data.error)
+            }
+          }
+        })
+        isSendRequest=true
+      }
+    })
+  })
+
+function getProCheck(id,element){
+  $.ajax({
+    type:'put',
+    url:baseUrl+'/v1/orders/',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify({
+      'order_id':id
+    }),
+    beforeSend:function(request){
+      request.setRequestHeader('authorization',localStorage.getItem('miushop_token'))
+    },
+    success:function(data){
+      if (data.code == 403) {
+        alert('用戶認證已過期，請重新登入')
+        window.localStorage.removeItem('miushop_username');
+        window.localStorage.removeItem('miushop_email');
+        window.localStorage.removeItem('miushop_token');
+        window.localStorage.removeItem('miushop_cartscount');
+        window.location.href = 'login.html'
+      }
+      if(data.code==200){
+        $('.modal').hide()
+        var status = element.parent().prev().prev()
+        order_status = data.data.order_status
+        console.log('status',status)
+        console.log('order_status',order_status)
+        var html=''
+        if(order_status==0){
+                html+='已取消'
+              }
+              else if(order_status==1){
+                html+='待付款'
+              }
+              else if(order_status==2){
+                html+='待發貨'
+              }
+              else if(order_status==3){
+                html+='待收貨'
+              }
+              else if(order_status==4){
+                html+='訂單完成'
+              }
+        status.html(html)
+        element.addClass('disable')
+        element.attr('disabled',true)
+        alert('訂單完成')
+      }
+    }
+  })
+}
+
+function getDetail(id){
+  window.location.href='order.html?order_id='+id
+}
+
+
+</script>
+
+</html>

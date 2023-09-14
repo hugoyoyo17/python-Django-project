@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+     <title>miumiu寵物商城</title>
+     <meta charset="utf-8">
+     <link rel="icon" href="images/favicon.ico">
+     <link rel="shortcut icon" href="images/favicon.ico" />
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/form.css">
+     <script src="js/jquery.js"></script>
+     <script src="js/init.js"></script>
+     <script src="js/forms.js"></script>
+     <script src="js/jquery-migrate-1.1.1.js"></script>
+     <script src="js/superfish.js"></script>     
+     <script src="js/jquery.equalheights.js"></script>
+     <script src="js/jquery.easing.1.3.js"></script>
+          <script src="js/jquery.ui.totop.js"></script>
+          <script src="
+          https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js
+          "></script>
+
+     <script>
+    
+    jQuery(document).ready(function() {
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+     </script>
+     <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <link rel="stylesheet" media="screen" href="css/ie.css">
+
+    <![endif]-->
+     </head>
+     <body>
+<!--==============================header=================================-->
+<header> 
+  <div class="container_12">
+    <div class="grid_12"> 
+    <h1><a href="index.html"><img src="images/logo.png" alt="Gerald Harris attorney at law"></a> </h1>
+         <div class="menu_block">
+           <nav  class="" >
+            <ul class="sf-menu">
+                   <!-- <li class="current"><a href="index.html">首頁</a></li> -->
+                   <li><a href="index.html">首頁</a></li>
+                   <li class="with_ul"><a href="product_list.html?list_for=貓咪商品">貓咪專區 </a>
+                     <ul>
+                         <li><a href="product_list.html?list_for=貓咪飼料"> 貓咪飼料</a></li>
+                         <li><a href="product_list.html?list_for=貓咪罐頭">貓咪罐頭</a></li>
+                         <li><a href="product_list.html?list_for=貓咪零食">貓咪零食</a></li>
+                         <li><a href="product_list.html?list_for=貓咪用品">貓咪用品</a></li>
+                     </ul>
+                   </li>
+                   <li class="with_ul"><a href="product_list.html?list_for=狗狗商品">狗狗專區</a>
+                    <ul>
+                      <li><a href="product_list.html?list_for=狗狗飼料">狗狗飼料</a></li>
+                      <li><a href="product_list.html?list_for=狗狗罐頭">狗狗罐頭</a></li>
+                      <li><a href="product_list.html?list_for=狗狗零食">狗狗零食</a></li>
+                      <li><a href="product_list.html?list_for=狗狗用品">狗狗用品</a></li>
+                  </ul>
+                  </li>
+                   <li><a href="adoption.html">浪浪之家 </a></li>
+                 </ul>
+              </nav>
+           <div class="clear"></div>
+           </div>
+           <div class="clear"></div>
+           <div class="right">
+            <ul class="login">
+              <li>
+                <a href="carts.html"><img src="images/shop_car.png" title="我的購物車">
+                <b class="my_car_count">0</b>
+                </a>   
+              </li>
+              <li><a href="login.html" id="my_login">登入</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+</header>
+
+
+<div class="content2 pt1">
+  <!-- <div class="ic">More Website Templates @ TemplateMonster.com - June 10, 2013!</div> -->
+  <div class="container_12">
+    <div id="navlist">
+        <ul>
+            <li class="navlist_blue_left"></li>
+            <li class="navlist_blue">確認訂單訊息</li>
+            <li class="navlist_blue_arrow"><canvas id="canvas_blue" width="20" height="38"></canvas>
+            </li>
+            <li class="navlist_gray">支付訂單<b></b></li>
+            <li class="navlist_gray_arrow"><canvas id="canvas_gray" width="20" height="38"></canvas>
+            </li>
+            <li class="navlist_gray">支付完成<b></b></li>
+            <li class="navlist_gray_right"></li>
+        </ul>
+    </div>
+    <div class="sign_up">
+        <a href="carts.html" id="back_cart">返回購物車</a>
+        <h3 class="ic1">確認商品訊息</h3>
+    </div>
+    <div class="grid_order prefix_1 ">
+      <div class="item_info">
+        <div class="item_title">
+          <ul>
+            <li class="p_name">商品訊息</li>
+            <li class="p_price">單價</li>
+            <li class="p_count">數量</li>
+            <li class="p_tprice">金額</li>
+          </ul>
+        </div>
+        <div class="item_detail">
+          <!-- <ul>
+            <li class="p_name">
+              <img src="http://127.0.0.1:8000/media/sku/1_CWVre0U.png" alt="">
+              <span class="pro_name lf">
+                老犬飼料 長壽配方 低過敏 小顆粒 狗飼料
+    
+              </span>
+              <p class="spec lf">尺寸：2KG</p>
+            </li>
+            <li class="p_price">
+              <span class="pro_price">NT$
+                <span class="ppp_price">100</span>
+              </span>
+            </li>
+            <li class="p_count">2</li>
+            <li class="p_tprice">
+              <span class="pro_tprice">NT$</span>
+              <span class="ppp_tprice">200</span>
+            </li>
+          </ul> -->
+        </div>
+        <div class="item_bot">
+          <p>共<span class="tot_count">1</span>件商品 &nbsp;&nbsp;合計：<span class="tot_price">260</span>元</p>
+          <p class="freight">運費+NT$ <span class="freight_price">60</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="grid_customer">
+      <h3>收件人訊息</h3>
+      <div class="default_address">
+        <span class="def_addr">預設地址</span> <br>
+        <!-- <label for="def-address">
+          <input type="radio" name="def-address" id="def-address" value="1" checked> 地址1 <br>
+          收件人：XXX <br>
+          收件人手機：0912345678 <br> 
+          地址：台北市 文山區 XXXXX
+        </label> 
+        <label for="def-address">
+          <input type="radio" name="def-address" id="def-address" value="2" > 地址2<br>
+          收件人：XXX <br>
+          收件人手機：0912345678 <br> 
+          地址：台北市 文山區 XXXXX
+        </label>  -->
+      </div>
+      <div class="new_address">
+        <label for="new-address">
+          <input type="radio" name="def-address" id="def-address" value="0" > 新增地址<br>
+          <div class="label_div">
+            <label for="receiver"> 收件人：</label>
+            <input type="text" id="receiver" name="receiver">
+          </div>
+          
+          <div class="label_div">
+            <label for="receiver_phone">收件人手機：</label>
+            <input type="text" id="receiver_phone" name="receiver_phone">
+          </div>
+          
+          <div class="label_div">
+            <label for="address">收件地區：</label>
+            <div role="tw-city-selector" class="address_selecter1">
+              <div>
+                <select class="county"></select><select class="district"></select>
+              </div>
+            </div>        
+          </div>
+          <div class="label_div">
+            <label for="address_address">地址：</label>
+            <input type="text" id="address_address" name="address_address">
+          </div>
+          </label> 
+          </div>
+        </div>
+        <div class="grid_pay">
+          <h3>付款方式</h3>
+          <div class="pay_div">
+            <input type="radio" id="pay_method" name="pay_method" value="1" checked>綠界
+          </div>
+        </div>
+        <div class="grid_remark">
+          <h3>訂單備註</h3>
+          <textarea name="remark" id="remark" cols="42" rows="10" placeholder="有什麼話想告訴賣家的嗎？"></textarea>
+        </div>
+        <span class="go_pay" id="go_pay">建立訂單</span>
+    </div>
+    
+    <div class="container_12" id="waiting" style="display: none;height: 600px;">
+      <div id="loader"></div>
+      <h3>生成訂單中...</h3>
+    </div>
+    <div class="container_12" id="order_success" style="display: none;">
+      <div id="navlist">
+        <ul>
+            <li class="navlist_blue_left"></li>
+            <li class="navlist_gray ">確認訂單訊息</li>
+            <li class="navlist_gray_arrow"><canvas id="canvas_blue" width="20" height="38"></canvas>
+            </li>
+            <li class="navlist_blue">支付訂單<b></b></li>
+            <li class="navlist_blue_arrow"><canvas id="canvas_gray" width="20" height="38"></canvas>
+            </li>
+            <li class="navlist_gray">支付完成<b></b></li>
+            <li class="navlist_gray_right"></li>
+        </ul>
+    </div>
+      <div class="grid_sign prefix_1" >
+       <div id="success"  >
+         <div class="img_result"><img src="images/success.png" alt=""></div>
+          <h3>訂單已建立，請立即前往付款</h3>
+          <p class="warning">※訂單已生成，請於一小時內完成繳費，否則系統將自動取消交易</p>
+          <p class="warning">※請注意！本次繳費僅為模擬系統，請勿使用您的信用卡進行交易</p>
+          <button id="go_to_pay">前往付款</button>
+       </div>
+   
+      </div>
+    </div>
+
+</div>
+</div>
+<!--=======content================================-->
+
+
+
+<!--==============================footer=================================-->
+
+<footer>    
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="socials">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+     <p>Pet Club  &copy; 2013 | <a href="#">Privacy Policy</a> | Website  designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></p>
+     
+    </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+<script>
+  $(function(){
+    new TwCitySelector({
+  el: '.address_selecter1',
+  elCounty: '.county', // 在 el 裡查找 element
+  elDistrict: '.district', // 在 el 裡查找 element
+  elZipcode: '.zipcode' // 在 el 裡查找 element
+});
+
+$.getUrlParam = function (name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return r;
+      return null;
+    }
+
+
+var sale_attr_value = location.search
+  // console.log(sale_attr_value)
+  if(sale_attr_value==''){
+    param_url = '?settlement_type=0'
+    settlement_type=0
+    put_ajax(param_url,settlement_type)
+  }
+  else{
+    param_url = sale_attr_value+'&settlement_type=1'
+    settlement_type=1
+    put_ajax(param_url,settlement_type)
+  }
+
+  function put_ajax(param_url,settlement_type){
+  $.ajax({
+    type:'get',
+    url:baseUrl+'/v1/orders/advance'+param_url,
+    beforeSend:function(request){
+      request.setRequestHeader('authorization',localStorage.getItem('miushop_token'))
+    },
+    success:function(data){
+      if (data.code == 403) {
+        alert('用戶認證已過期，請重新登入')
+        window.localStorage.removeItem('miushop_username');
+        window.localStorage.removeItem('miushop_email');
+        window.localStorage.removeItem('miushop_token');
+        window.localStorage.removeItem('miushop_cartscount');
+        window.location.href = 'login.html'
+      }
+      if(data.code==200){
+        // alert('前往支付')
+        var html = '';
+        var IMG_URL = data.base_url;
+        var addr = data.data.address;
+        var sl = data.data.skus_list
+        console.log(sl)
+        for(var i=0;i<sl.length;i++){
+          var spec = sl[i].sku_sale_attr_name.toString().split('/')[1]
+          // 顯示有勾選的商品
+          if(sl[i].selected==1){
+            html += `
+        <div class="p_info" data-id="${sl[i].id}">
+        <ul>
+            <li class="p_name" data-id="${sl[i].id}">
+              <img src="${IMG_URL + sl[i].image}" alt="">
+              <span class="pro_name lf">
+                ${sl[i].name}
+              </span>
+              <p class="spec lf">${spec}：${sl[i].sku_sale_attr_value}</p>
+            </li>
+            <li class="p_price">
+              <span class="pro_price">NT$
+                <span class="ppp_price">${sl[i].price}</span>
+              </span>
+            </li>
+            <li class="p_count">${sl[i].count}</li>
+            <li class="p_tprice">
+              <span class="pro_tprice">NT$</span>
+              <span class="ppp_tprice">${sl[i].price * sl[i].count}</span>
+            </li>
+          </ul>
+          </div>
+        `
+          }            
+          }
+        $('.item_detail').html(html)
+
+        // 運費判斷
+        $('.freight_price').html(60)
+        sumPrice()
+        sumNum()
+        
+        var addr_html = '';
+        for(var j=0;j<addr.length;j++){
+          addr_html+=`
+          <label for="def-address">
+          `
+          if (j==0) {
+            addr_html += '<input type="radio" name="def-address" id="def-address" value="'+addr[j].id+'" checked> 地址'+(j+1)+'<br>'
+          }
+          else {
+            addr_html+='<input type="radio" name="def-address" id="def-address" value="'+addr[j].id+'"> 地址'+(j+1)+'<br>'
+          }
+          addr_html+=`
+          收件人：${addr[j].receiver} <br>
+          收件人手機：${addr[j].receiver_phone} <br> 
+          地址：${addr[j].county} ${addr[j].district} ${addr[j].road}
+        </label>
+        ` 
+        }
+        $('.def_addr').after(addr_html)
+      }
+      else{
+        alert(data.error)
+      }
+    } 
+  })    
+  }
+  
+  $('.go_pay').click(function(){
+    var email = window.localStorage.getItem('miushop_email')
+    // console.log('succ')
+    var addr_val = $('input[name="def-address"]:checked').val()
+    // console.log(addr_val)
+
+    var spu_id = $.getUrlParam('spu_id')?$.getUrlParam('spu_id')[2]:0
+    var count = $.getUrlParam('count')?$.getUrlParam('count')[2]:0
+    var sale_attr_value = $.getUrlParam('sale_attr_value')?$.getUrlParam('sale_attr_value')[2]:0
+    // console.log(spu_id,count,sale_attr_value)
+
+    if(addr_val==0){
+      $.ajax({
+        type: 'post',
+        url: baseUrl + '/v1/users/' + email + '/address',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify({
+          'receiver': $('#receiver').val(),
+          'receiver_phone': $('#receiver_phone').val(),
+          'county': $('.county').val(),
+          'district': $('.district').val(),
+          'road': $('#address_address').val()
+        }),
+        beforeSend: function (request) {
+          request.setRequestHeader('authorization', localStorage.getItem('miushop_token'))
+        },
+        success:function(data){
+          if (data.code == 403) {
+            alert('用戶認證已過期，請重新登入')
+            window.localStorage.removeItem('miushop_username');
+            window.localStorage.removeItem('miushop_email');
+            window.localStorage.removeItem('miushop_token');
+            window.localStorage.removeItem('miushop_cartscount');
+            window.location.href = 'login.html'
+          }
+          if(data.code==200){
+            console.log('添加成功')
+            console.log(data.data.id)
+            var addrID = data.data.id
+            getData(addrID)
+          }else{
+            alert(data.error)
+          }
+        }
+      })
+    }
+    else{
+      addrID = addr_val
+      getData(addrID)
+    }
+
+  })
+
+function getData(addrID){
+  var email = window.localStorage.getItem('miushop_email')
+  var spu_id = $.getUrlParam('spu_id')?$.getUrlParam('spu_id')[2]:0
+    var count = $.getUrlParam('count')?$.getUrlParam('count')[2]:0
+    var sale_attr_value = $.getUrlParam('sale_attr_value')?$.getUrlParam('sale_attr_value')[2]:0
+
+  if(spu_id!=0&&count!=0&&sale_attr_value!=0){
+      var data = {
+        'settlement_type':1,
+        'spu_id':spu_id,
+        'count':count,
+        'sale_attr_value':sale_attr_value,
+        'pay_method':$('#pay_method').val(),
+        'freight':$('.freight_price').text(),
+        'remark':$('#remark').val(),
+        'addr_id':addrID
+      }
+    }
+    else{
+      var data = {
+        'settlement_type':0,
+        'pay_method':$('#pay_method').val(),
+        'freight':$('.freight_price').text(),
+        'remark':$('#remark').val(),
+        'addr_id':addrID
+      }
+    }
+
+    $.ajax({
+      type:'post',
+      url:baseUrl+'/v1/orders/'+email,
+      contentType:'application/json',
+      async:false,
+      dataType:'json',
+      data:JSON.stringify(
+        data
+     ),
+     beforeSend: function (request) {
+          request.setRequestHeader('authorization', localStorage.getItem('miushop_token'))
+        },
+        success:function(data){
+          if (data.code == 403) {
+            alert('用戶認證已過期，請重新登入')
+            window.localStorage.removeItem('miushop_username');
+            window.localStorage.removeItem('miushop_email');
+            window.localStorage.removeItem('miushop_token');
+            window.localStorage.removeItem('miushop_cartscount');
+            window.location.href = 'login.html'
+          }
+          if(data.code==200){
+            $('.container_12').hide();
+            $('#waiting').show();
+            setTimeout(function(){
+              $('#waiting').hide();
+              $('#order_success').show();
+              $('#go_to_pay').click(function () {
+                // var newWindow = window.open();
+                // newWindow.document.open();
+                // newWindow.document.write(data.data);
+                // newWindow.document.close();
+                html = data.data
+                $('#order_success').html(html)
+              })
+            },2000)
+
+
+          }else{
+            alert(data.error)
+          }
+        }
+    })
+}
+  
+  })
+
+
+
+function sumPrice(){
+  var total = 0
+  $('.ppp_tprice').each(function(index,element){
+    total+=parseInt($('.ppp_tprice').eq(index).text())
+  })
+  total+=parseInt($('.freight_price').text())
+  $('.tot_price').html(total)
+}
+function sumNum(){
+  tot_count = $('.p_info').length
+  $('.tot_count').html(tot_count)
+}
+
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+$(function(){
+    $('#pass_change').click(function(){
+        var email = window.localStorage.getItem('miushop_email')
+        var token = window.localStorage.getItem('miushop_token')
+      $.ajax({
+        type:'post',
+        beforeSend:function(request){
+            request.setRequestHeader('authorization',token)
+        },
+        url:baseUrl+'/v1/users/'+email+'/change_pass',
+        contentType:'application/json',
+        dataType:'json',
+        data:JSON.stringify({
+          'old_pass':$('#oldpass').val(),
+          'new_pass':$('#newpass').val(),
+          'new_pass_check':$('#newpass_check').val()
+        }),
+        success:function(data){
+          if(data.code==403){
+              alert('用戶認證已過期，請重新登入')
+              window.localStorage.removeItem('miushop_username');
+              window.localStorage.removeItem('miushop_email');
+              window.localStorage.removeItem('miushop_token');
+              window.localStorage.removeItem('miushop_cartscount');
+              window.location.href='login.html'
+          }
+          if(data.code==200){
+            alert(data.data);
+            window.location.href='personal_info.html'
+          }else if(data.code==10318){
+            alert(data.error);
+            window.location.reload();
+          }else{
+            alert(data.error);
+          }
+        }
+      })
+    })
+})
